@@ -1,12 +1,12 @@
 import React from 'react';
 
-const PrivacyStatement = () => {
+const About = () => {
   const styles = {
     container: {
       maxWidth: '800px',
       margin: '0 auto',
       padding: '20px',
-      backgroundColor: '#f5f5f5',
+      backgroundColor: '#f0f4f9',
     },
     header: {
       fontSize: '24px',
@@ -44,4 +44,4 @@ const PrivacyStatement = () => {
   );
 };
 
-export default PrivacyStatement;
+export default About;

@@ -6,7 +6,7 @@ import Footer from "./containers/footer/Footer";
 import Chatting from "./containers/Chat/Chatting";
 import Register from "./containers/register/Register";
 import Success from "./containers/success/Success";
-import PrivacyStatement from "./containers/Privacy/PrivacyStatement";
+import About from "./containers/About/About";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
 
           <Route path="/register" element={<Register />} />
 
-          <Route path="/Privacy" element={<PrivacyStatement />} />
+          <Route path="/About" element={<About />} />
 
           <Route path="/success" element={<Success />} />
         </Routes>

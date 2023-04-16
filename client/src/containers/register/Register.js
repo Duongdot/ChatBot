@@ -5,7 +5,8 @@ import { enrollmentApplication } from "../../services/userService";
 import Modal from "react-bootstrap/Modal";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import "./Register.scss"; // Add this line to import the custom styles
+import "./Register.css";
+
 
 const Register = (props) => {
   const navigate = useNavigate();
@@ -171,14 +172,18 @@ const Register = (props) => {
                 </Form.Select>
               </Form.Group>
 
-              <Button variant="primary" onClick={handleOnClick}>
-                Submit
-              </Button>
+              <div className="submit-button-wrapper">
+                <Button className="btn-cold" variant="primary" onClick={handleOnClick}>
+                  Submit
+                </Button>
+              </div>
+
+
             </Form>
           </div>
         </div>
       </div>
-          
+
 
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header>

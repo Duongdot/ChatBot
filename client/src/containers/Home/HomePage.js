@@ -6,8 +6,8 @@ import Bounce from "react-reveal/Bounce";
 import Pulse from "react-reveal/Pulse";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentAlt, faUserPlus } from "@fortawesome/free-solid-svg-icons";
-
-
+import Tada from "react-reveal/Tada";
+import "./HomePage.css";
 
 const HomePage = () => {
   const styles = {
@@ -27,6 +27,7 @@ const HomePage = () => {
     },
     chatbotDescription: {
       color: "#1c4e78",
+      textAlign: "justify",
     },
     startChattingBtn: {
       backgroundColor: "#1c4e78",
@@ -53,21 +54,29 @@ const HomePage = () => {
             </div>
           </Zoom>
           <div style={styles.infoContainer}>
-            <p style={styles.infoText}>
-              Do you want admission counseling?
-            </p>
+            <Tada forever delay={1000}>
+              <p className="reverse-tada" style={styles.infoText}>
+                Do you want admission counseling?
+              </p>
+            </Tada>
 
-            <p style={styles.infoText}>
-              Are you looking for the most suitable school for you to study?
-            </p>
+            <Tada forever delay={2000}>
+              <p className="reverse-tada" style={styles.infoText}>
+                Are you looking for the most suitable school for you to study?
+              </p>
+            </Tada>
 
-            <p style={styles.infoText}>
-              I will give you the best advice to choose a school.
-            </p>
+            <Tada forever delay={3000}>
+              <p className="reverse-tada" style={styles.infoText}>
+                I will give you the best advice to choose a school.
+              </p>
+            </Tada>
 
-            <p style={styles.infoText}>
-              You will have more options when you receive my advice.
-            </p>
+            <Tada forever delay={4000}>
+              <p className="reverse-tada" style={styles.infoText}>
+                You will have more options when you receive my advice.
+              </p>
+            </Tada>
           </div>
         </div>
 
@@ -79,7 +88,11 @@ const HomePage = () => {
             I'm a chatbot, not a human being. I will help you choose the best
             school and learning environment.
           </p>
-
+          <p className="fs-5" style={styles.chatbotDescription}>
+            If you've had intimate images taken, created or shared without your consent, or someone has threatened to share your images, I'm here to help. If you're supporting someone who's experienced image-based abuse, or you're concerned about something you've done, I can help you too.
+          </p>
+          <p className="fs-5" style={styles.chatbotDescription}>
+            Anyone can ask me questions about where to get help, reporting options, online safety and much more.          </p>
           <div className="row">
             <div className="col-6">
               <Pulse>
@@ -94,7 +107,7 @@ const HomePage = () => {
               </Pulse>
             </div>
 
-            <div className="col-6">
+            {/* <div className="col-6">
               <Pulse>
                 <NavLink
                   className="btn btn-success p-3 rounded-pill fs-5 fw-semibold"
@@ -105,7 +118,7 @@ const HomePage = () => {
                   Register
                 </NavLink>
               </Pulse>
-            </div>
+            </div> */}
 
           </div>
         </div>
