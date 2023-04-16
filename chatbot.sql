@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 --
 -- Cấu trúc bảng cho bảng `sequelizemeta`
 --
+CREATE DATABASE chatbot;
+
+use chatbot;
 
 CREATE TABLE `sequelizemeta` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL

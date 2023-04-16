@@ -6,6 +6,7 @@ import Footer from "./containers/footer/Footer";
 import Chatting from "./containers/Chat/Chatting";
 import Register from "./containers/register/Register";
 import Success from "./containers/success/Success";
+import PrivacyStatement from "./containers/Privacy/PrivacyStatement";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path="/chatting" element={<Chatting />} />
 
           <Route path="/register" element={<Register />} />
+
+          <Route path="/Privacy" element={<PrivacyStatement />} />
 
           <Route path="/success" element={<Success />} />
         </Routes>

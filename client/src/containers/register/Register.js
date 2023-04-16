@@ -5,6 +5,7 @@ import { enrollmentApplication } from "../../services/userService";
 import Modal from "react-bootstrap/Modal";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
+import "./Register.scss"; // Add this line to import the custom styles
 
 const Register = (props) => {
   const navigate = useNavigate();
@@ -68,27 +69,23 @@ const Register = (props) => {
           navigate("/success");
         }
       } catch (e) {
-        console.log(">>>onClick: ", e);
+        console.error(e);
       }
     }
   };
 
   return (
-    <div className="container-fuild my-5">
-      <div className="row justify-content-center align-items-center gap-5">
-        <div className="col-lg-4">
+    <div className="register-container">
+      <div className="register-content">
+        <div className="register-image">
           <img src={Img} alt="..." className="img-fluid" />
         </div>
 
-        <div className="col-lg-3 bg-white p-0" style={{ borderRadius: "20px" }}>
-          <div
-            className="bg-primary text-center px-5 py-2 fs-4 fw-semibold text-white"
-            style={{ borderRadius: "20px 20px 0 0" }}
-          >
-            <p>SCHOLARSHIP UP TO 400 MILLION VND</p>
+        <div className="register-form-container">
+          <div className="register-heading">
+            <h2>SCHOLARSHIP UP TO 400 MILLION VND</h2>
           </div>
-
-          <div className="px-3 mt-3">
+          <div className="register-form">
             <Form className="p-4">
               <Form.Group className="mb-3">
                 <Form.Control
@@ -181,6 +178,7 @@ const Register = (props) => {
           </div>
         </div>
       </div>
+          
 
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header>

@@ -44,6 +44,16 @@ function Header() {
             >
               Register
             </Nav.Link>
+
+            <Nav.Link
+              className="text-dark fw-semibold"
+              eventKey={3}
+              as={NavLink}
+              to={"/Privacy"}
+            >
+              About
+            </Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
       <div className="row text-center mt-5">
         <div className="col">
-          <p className="">Copyright &copy; 2023 Chat Bot Dialogflow</p>
+          <p className="">Copyright &copy; 2023 Chat Bot </p>
         </div>
       </div>
     </div>
