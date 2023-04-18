@@ -45,6 +45,14 @@ function Header() {
             >
               About
             </Nav.Link>
+            <Nav.Link
+              className="text-dark fw-semibold"
+              eventKey={4}
+              as={NavLink}
+              to={"/Privacy"}
+            >
+              Privacy
+            </Nav.Link>
 
             <Button
               className="fw-semibold ms-2"

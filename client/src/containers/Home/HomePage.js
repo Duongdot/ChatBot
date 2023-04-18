@@ -22,7 +22,7 @@ const HomePage = () => {
       margin: "16px 24px",
       borderRadius: "20px",
       border: "1px solid #1c4e78",
-      backgroundColor: "#e7eff6",
+      backgroundColor: "#F0F4FA",
       color: "#1c4e78",
     },
     chatbotDescription: {
@@ -89,10 +89,9 @@ const HomePage = () => {
             school and learning environment.
           </p>
           <p className="fs-5" style={styles.chatbotDescription}>
-            If you've had intimate images taken, created or shared without your consent, or someone has threatened to share your images, I'm here to help. If you're supporting someone who's experienced image-based abuse, or you're concerned about something you've done, I can help you too.
-          </p>
+            The primary goal of this chatbot is to provide guidance and assistance to prospective students regarding the admission process, scholarship opportunities, tuition fees, and other related topics.          </p>
           <p className="fs-5" style={styles.chatbotDescription}>
-            Anyone can ask me questions about where to get help, reporting options, online safety and much more.          </p>
+            Anyone can ask me questions about where to get help, reporting options, online safety and much more.</p>
           <div className="row">
             <div className="col-6">
               <Pulse>
