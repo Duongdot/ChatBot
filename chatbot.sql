@@ -35,7 +35,7 @@ CREATE TABLE `sequelizemeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sequelizemeta`
+--  `sequelizemeta`
 --
 
 INSERT INTO `sequelizemeta` (`name`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `sequelizemeta` (`name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- `users`
 --
 
 CREATE TABLE `users` (

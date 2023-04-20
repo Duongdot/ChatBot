@@ -18,9 +18,10 @@ const Register = (props) => {
   const [major, setMajor] = useState("");
   const [location, setLocation] = useState("");
   const [show, setShow] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   const handleOnClick = async () => {
     console.log(
@@ -43,8 +44,21 @@ const Register = (props) => {
       !major ||
       !location
     ) {
-      console.log("missing parameters");
+      setErrorMessage("Please fill in all the fields.");
+    } else if (
+      !/^\d{10}$/g.test(phoneNumber) // check if the phone number is a 10-digit number
+    ) {
+      setErrorMessage("Invalid phone number format the phone number is a 10-digit number.");
+    } else if (
+      !/^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/g.test(email) // check if the email is in a valid format
+    ) {
+      setErrorMessage("Invalid email format.");
+    } else if (major === "Major") {
+      setErrorMessage("Please select a major.");
+    } else if (location === "Where to register for admission") {
+      setErrorMessage("Please select a location to register for admission.");
     } else {
+      setErrorMessage("");
       try {
         const response = await enrollmentApplication({
           name,
@@ -75,6 +89,7 @@ const Register = (props) => {
     }
   };
 
+
   return (
     <div className="register-container">
       <div className="register-content">
@@ -88,6 +103,12 @@ const Register = (props) => {
           </div>
           <div className="register-form">
             <Form className="p-4">
+              {errorMessage && (
+                <div className="error-message mb-3">
+                  <p className="text-danger">{errorMessage}</p>
+                </div>
+              )}
+
               <Form.Group className="mb-3">
                 <Form.Control
                   type="text"
